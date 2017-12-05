@@ -10,19 +10,28 @@
 		A8133BA11FD60464008CF64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8133BA01FD60464008CF64B /* Assets.xcassets */; };
 		A8133BA31FD635A3008CF64B /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8133BA21FD635A3008CF64B /* LoadingCell.xib */; };
 		A8133BA51FD654F5008CF64B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8133BA41FD654F5008CF64B /* UIImageView+DownloadImage.swift */; };
+		A8133BA71FD662A9008CF64B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8133BA61FD662A9008CF64B /* DetailViewController.swift */; };
+		A8133BA91FD6662B008CF64B /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8133BA81FD6662B008CF64B /* DimmingPresentationController.swift */; };
+		A8133BAB1FD679FF008CF64B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8133BAA1FD679FF008CF64B /* GradientView.swift */; };
+		A8133BAD1FD67D22008CF64B /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8133BAC1FD67D22008CF64B /* BounceAnimationController.swift */; };
+		A8133BB31FD6808B008CF64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8133BB21FD6808B008CF64B /* Main.storyboard */; };
 		A82A989A1FD55AAE0041DDFE /* SearchResult .swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A98991FD55AAE0041DDFE /* SearchResult .swift */; };
 		A82A989C1FD560E70041DDFE /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82A989B1FD560E70041DDFE /* SearchResultCell.xib */; };
 		A82A98A01FD5633C0041DDFE /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */; };
 		A8EA05D81FD5FB5C0048A945 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EA05D71FD5FB5C0048A945 /* NothingFoundCell.xib */; };
 		B72C26371FB2E7D40001260D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C26361FB2E7D40001260D /* AppDelegate.swift */; };
 		B72C26391FB2E7D40001260D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C26381FB2E7D40001260D /* SearchViewController.swift */; };
-		B72C263C1FB2E7D40001260D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72C263A1FB2E7D40001260D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A8133BA01FD60464008CF64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8133BA21FD635A3008CF64B /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		A8133BA41FD654F5008CF64B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		A8133BA61FD662A9008CF64B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A8133BA81FD6662B008CF64B /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		A8133BAA1FD679FF008CF64B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A8133BAC1FD67D22008CF64B /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
+		A8133BB21FD6808B008CF64B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A82A98991FD55AAE0041DDFE /* SearchResult .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResult .swift"; sourceTree = "<group>"; };
 		A82A989B1FD560E70041DDFE /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -30,7 +39,6 @@
 		B72C26331FB2E7D40001260D /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72C26361FB2E7D40001260D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72C26381FB2E7D40001260D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		B72C263B1FB2E7D40001260D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B72C26421FB2E7D40001260D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,15 +74,19 @@
 			children = (
 				B72C26361FB2E7D40001260D /* AppDelegate.swift */,
 				B72C26381FB2E7D40001260D /* SearchViewController.swift */,
+				A8133BA61FD662A9008CF64B /* DetailViewController.swift */,
 				A82A98991FD55AAE0041DDFE /* SearchResult .swift */,
 				A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */,
+				A8133BAA1FD679FF008CF64B /* GradientView.swift */,
 				A82A989B1FD560E70041DDFE /* SearchResultCell.xib */,
 				A8EA05D71FD5FB5C0048A945 /* NothingFoundCell.xib */,
 				A8133BA21FD635A3008CF64B /* LoadingCell.xib */,
-				B72C263A1FB2E7D40001260D /* Main.storyboard */,
+				A8133BB21FD6808B008CF64B /* Main.storyboard */,
 				A8133BA41FD654F5008CF64B /* UIImageView+DownloadImage.swift */,
+				A8133BA81FD6662B008CF64B /* DimmingPresentationController.swift */,
 				A8133BA01FD60464008CF64B /* Assets.xcassets */,
 				B72C26421FB2E7D40001260D /* Info.plist */,
+				A8133BAC1FD67D22008CF64B /* BounceAnimationController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -139,9 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82A989C1FD560E70041DDFE /* SearchResultCell.xib in Resources */,
+				A8133BB31FD6808B008CF64B /* Main.storyboard in Resources */,
 				A8133BA31FD635A3008CF64B /* LoadingCell.xib in Resources */,
 				A8EA05D81FD5FB5C0048A945 /* NothingFoundCell.xib in Resources */,
-				B72C263C1FB2E7D40001260D /* Main.storyboard in Resources */,
 				A8133BA11FD60464008CF64B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,25 +166,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82A989A1FD55AAE0041DDFE /* SearchResult .swift in Sources */,
+				A8133BA91FD6662B008CF64B /* DimmingPresentationController.swift in Sources */,
 				B72C26391FB2E7D40001260D /* SearchViewController.swift in Sources */,
 				A82A98A01FD5633C0041DDFE /* SearchResultCell.swift in Sources */,
+				A8133BAD1FD67D22008CF64B /* BounceAnimationController.swift in Sources */,
+				A8133BA71FD662A9008CF64B /* DetailViewController.swift in Sources */,
 				B72C26371FB2E7D40001260D /* AppDelegate.swift in Sources */,
+				A8133BAB1FD679FF008CF64B /* GradientView.swift in Sources */,
 				A8133BA51FD654F5008CF64B /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B72C263A1FB2E7D40001260D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B72C263B1FB2E7D40001260D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B72C26431FB2E7D40001260D /* Debug */ = {
