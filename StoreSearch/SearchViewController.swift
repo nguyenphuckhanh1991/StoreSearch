@@ -11,12 +11,14 @@ import UIKit
 struct TableViewCellIdentifiers {
   static let searchResultCell = "SearchResultCell"
   static let nothingFoundCell = "NothingFoundCell"
+  static let loadingCell = "LoadingCell"
 }
 class SearchViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var searchBar: UISearchBar!
   var searchResults: [SearchResult] = []
   var hasSearched = false
+  var isLoading = false
   override func viewDidLoad() {
     super.viewDidLoad()
     searchBar.becomeFirstResponder()
@@ -27,6 +29,10 @@ class SearchViewController: UIViewController {
     cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell,
                     bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
+    cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell,
+                    bundle: nil)
+    tableView.register(cellNib, forCellReuseIdentifier:
+      TableViewCellIdentifiers.loadingCell)
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -35,7 +41,7 @@ class SearchViewController: UIViewController {
   func iTunesURL(searchText: String) -> URL {
     let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
     let urlString = String(format:
-      "https://itunes.apple.com/search?term=%@", escapedSearchText)
+      "https://itunes.apple.com/search?term=%@&limit=200", escapedSearchText)
     let url = URL(string: urlString)
     return url!
   }
@@ -180,20 +186,30 @@ extension SearchViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     if !searchBar.text!.isEmpty {
       searchBar.resignFirstResponder()
+      isLoading = true
+      tableView.reloadData()
       hasSearched = true
       searchResults = []
-      let url = iTunesURL(searchText: searchBar.text!)
-      print("URL: '\(url)'")
-      if let jsonString = performStoreRequest(with: url) {
-        if let jsonDictionary = parse(json: jsonString) {
-          print("Dictionary \(jsonDictionary)")
-          searchResults = parse(dictionary: jsonDictionary)
-          searchResults.sort(by: <)
-          tableView.reloadData()
+      // 1
+      let queue = DispatchQueue.global()
+      // 2
+      queue.async {
+        let url = self.iTunesURL(searchText: searchBar.text!)
+        if let jsonString = self.performStoreRequest(with: url),
+          let jsonDictionary = self.parse(json: jsonString) {
+          self.searchResults = self.parse(dictionary: jsonDictionary)
+          self.searchResults.sort(by: <)
+          // 3
+          DispatchQueue.main.async {
+            self.isLoading = false
+            self.tableView.reloadData()
+          }
           return
         }
+        DispatchQueue.main.async {
+          self.showNetworkError()
+        }
       }
-      showNetworkError()
     }
   }
   func position(for bar: UIBarPositioning) -> UIBarPosition {
@@ -212,7 +228,12 @@ extension SearchViewController: UITableViewDataSource {
   }
   func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if searchResults.count == 0 {
+    if isLoading {
+      let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.loadingCell, for: indexPath)
+      let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+      spinner.stopAnimating()
+      return cell
+    } else if searchResults.count == 0 {
       return tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.nothingFoundCell, for: indexPath)
     } else {
       let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
@@ -232,7 +253,7 @@ extension SearchViewController: UITableViewDelegate {
     tableView.deselectRow(at: indexPath, animated: true)
   }
   func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    if searchResults.count == 0 {
+    if searchResults.count == 0 || isLoading {
       return nil
     } else {
       return indexPath

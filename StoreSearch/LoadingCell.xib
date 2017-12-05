@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoadingCell" id="Wl4-Yn-92Y">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wl4-Yn-92Y" id="2mH-cc-EBP">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgi-Re-JrU">
+                        <rect key="frame" x="90" y="9" width="140" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-ay-QSM">
+                                <rect key="frame" x="20" y="21" width="67.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-zW-aP1">
+                                <rect key="frame" x="90" y="20" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Coi-ay-QSM" firstAttribute="top" secondItem="vgi-Re-JrU" secondAttribute="top" constant="21" id="8cX-nk-jpP"/>
+                            <constraint firstItem="Lhf-zW-aP1" firstAttribute="leading" secondItem="Coi-ay-QSM" secondAttribute="trailing" constant="2.5" id="DCF-Rc-BZf"/>
+                            <constraint firstAttribute="bottom" secondItem="Lhf-zW-aP1" secondAttribute="bottom" constant="20" id="Gpz-Yi-7r1"/>
+                            <constraint firstItem="Lhf-zW-aP1" firstAttribute="top" secondItem="vgi-Re-JrU" secondAttribute="top" constant="20" id="JmE-GJ-dwh"/>
+                            <constraint firstAttribute="trailing" secondItem="Lhf-zW-aP1" secondAttribute="trailing" constant="30" id="RSX-kw-Ip8"/>
+                            <constraint firstItem="Coi-ay-QSM" firstAttribute="leading" secondItem="vgi-Re-JrU" secondAttribute="leading" constant="20" id="cez-Yw-FsT"/>
+                            <constraint firstAttribute="bottom" secondItem="Coi-ay-QSM" secondAttribute="bottom" constant="21" id="re7-Zg-9HG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vgi-Re-JrU" firstAttribute="centerX" secondItem="2mH-cc-EBP" secondAttribute="centerX" id="CbA-Ps-hhe"/>
+                    <constraint firstItem="vgi-Re-JrU" firstAttribute="centerY" secondItem="2mH-cc-EBP" secondAttribute="centerY" id="Dna-QL-43v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-137" y="-37"/>
+        </tableViewCell>
+    </objects>
+</document>

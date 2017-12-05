@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8133BA11FD60464008CF64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8133BA01FD60464008CF64B /* Assets.xcassets */; };
+		A8133BA31FD635A3008CF64B /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8133BA21FD635A3008CF64B /* LoadingCell.xib */; };
 		A82A989A1FD55AAE0041DDFE /* SearchResult .swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A98991FD55AAE0041DDFE /* SearchResult .swift */; };
 		A82A989C1FD560E70041DDFE /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82A989B1FD560E70041DDFE /* SearchResultCell.xib */; };
 		A82A98A01FD5633C0041DDFE /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		A8133BA01FD60464008CF64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8133BA21FD635A3008CF64B /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		A82A98991FD55AAE0041DDFE /* SearchResult .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResult .swift"; sourceTree = "<group>"; };
 		A82A989B1FD560E70041DDFE /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				A82A989F1FD5633C0041DDFE /* SearchResultCell.swift */,
 				A82A989B1FD560E70041DDFE /* SearchResultCell.xib */,
 				A8EA05D71FD5FB5C0048A945 /* NothingFoundCell.xib */,
+				A8133BA21FD635A3008CF64B /* LoadingCell.xib */,
 				B72C263A1FB2E7D40001260D /* Main.storyboard */,
 				A8133BA01FD60464008CF64B /* Assets.xcassets */,
 				B72C263F1FB2E7D40001260D /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				B72C26411FB2E7D40001260D /* LaunchScreen.storyboard in Resources */,
 				A82A989C1FD560E70041DDFE /* SearchResultCell.xib in Resources */,
+				A8133BA31FD635A3008CF64B /* LoadingCell.xib in Resources */,
 				A8EA05D81FD5FB5C0048A945 /* NothingFoundCell.xib in Resources */,
 				B72C263C1FB2E7D40001260D /* Main.storyboard in Resources */,
 				A8133BA11FD60464008CF64B /* Assets.xcassets in Resources */,

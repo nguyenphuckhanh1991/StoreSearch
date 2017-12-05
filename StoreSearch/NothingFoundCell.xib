@@ -18,16 +18,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gh-h1-bWg">
-                        <rect key="frame" x="109" y="31" width="102" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-OU-cR4">
+                        <rect key="frame" x="89" y="11" width="142" height="58"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gh-h1-bWg">
+                                <rect key="frame" x="20" y="20" width="102" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Gh-h1-bWg" firstAttribute="leading" secondItem="xDA-OU-cR4" secondAttribute="leading" constant="20" id="K1D-ox-lN5"/>
+                            <constraint firstAttribute="bottom" secondItem="6Gh-h1-bWg" secondAttribute="bottom" constant="20" id="d0s-Df-ZIV"/>
+                            <constraint firstItem="6Gh-h1-bWg" firstAttribute="top" secondItem="xDA-OU-cR4" secondAttribute="top" constant="20" id="dtt-Gj-hcU"/>
+                            <constraint firstAttribute="trailing" secondItem="6Gh-h1-bWg" secondAttribute="trailing" constant="20" id="yN0-ty-EqR"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6Gh-h1-bWg" firstAttribute="centerY" secondItem="Lf6-KP-FZo" secondAttribute="centerY" id="RMq-m6-axA"/>
-                    <constraint firstItem="6Gh-h1-bWg" firstAttribute="centerX" secondItem="Lf6-KP-FZo" secondAttribute="centerX" id="rIk-45-qdp"/>
+                    <constraint firstItem="xDA-OU-cR4" firstAttribute="centerY" secondItem="Lf6-KP-FZo" secondAttribute="centerY" id="2dH-l2-Os4"/>
+                    <constraint firstItem="xDA-OU-cR4" firstAttribute="centerX" secondItem="Lf6-KP-FZo" secondAttribute="centerX" id="dB2-sj-xbF"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="34" y="108"/>
